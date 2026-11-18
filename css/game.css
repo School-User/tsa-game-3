@@ -21,3 +21,6 @@ h1 { font-size: 2.2rem; margin: .5rem 0; } h2 { margin: .5rem 0; }
 .who { color: var(--accent); font-weight:700; margin:0; }
 .row { display:flex; align-items:center; gap:.5rem; margin:.3rem 0; } .statname { min-width:10rem; }
 @media (prefers-reduced-motion: no-preference) { .meter span { transition: width .4s; } }
+
+.hero { display:block; width:100%; aspect-ratio:16/9; object-fit:cover; border-radius:1rem; margin:.5rem 0; background: var(--panel); }
+[tabindex="-1"]:focus { outline: none; }

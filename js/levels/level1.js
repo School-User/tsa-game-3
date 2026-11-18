@@ -14,6 +14,7 @@ window.Levels = window.Levels || [];
     end: { speaker: 'Fern (garden AI)', text: 'I will be here, watering things that do not need water.' } } };
 
   window.Levels[0] = { id: 1, title: 'Seed Vault',
+    image: 'assets/level1.webp', imageAlt: 'Illustration: a seed vault with glass drawers of seeds and a round vault door with a four by four grid of lock-lights.',
     intro: 'Rows of frosted glass drawers, each holding a thousand seeds from a world that no longer exists. A grid of sixteen lock-lights glows on the vault door, mostly lit. The whole room smells of cold soil.',
     hotspots: [
       { id: 'look1', label: 'Look at the seed drawers', text: 'Labels in a dead language. Tomato. Rice. A flower you do not know the name of. Each drawer hums softly.', xp: 5 },

@@ -18,6 +18,7 @@ window.Levels = window.Levels || [];
       choices: [ { text: 'Close the channel.', setFlag: 'contacted' } ] } } };
 
   window.Levels[2] = { id: 3, title: 'Water Room',
+    image: 'assets/level3.webp', imageAlt: 'Illustration: a water room with a tangle of ceiling pipes and a frame of eight numbered pipe sections with one empty slot.',
     intro: 'Pipes cross the ceiling in a tangle. Eight numbered pipe sections sit in a frame with one empty slot. Until they are in order, no water reaches the dome.',
     hotspots: [
       { id: 'look3', label: 'Listen to the pipes', text: 'A slow drip, then silence. Somewhere up the line there is a missing segment of the tangle.', xp: 5 },

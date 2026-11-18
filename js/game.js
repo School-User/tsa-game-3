@@ -17,11 +17,19 @@
     var t = root.querySelector('.panel h2, .panel .who, h1, h2, .hud strong');
     if (t) { t.setAttribute('tabindex', '-1'); t.focus({ preventScroll: false }); }
   }
+  // Decorative illustration (AI-generated, disclosed in docs/ai-log.md). The game works without it.
+  function pic(src, alt) {
+    if (!src) return document.createComment('');
+    var i = el('img', { 'class': 'hero', src: src, alt: alt || '', loading: 'lazy' });
+    i.addEventListener('error', function () { i.remove(); });
+    return i;
+  }
   function btn(text, onClick, cls) { var b = el('button', { type: 'button', 'class': 'btn ' + (cls || '') }, text); b.addEventListener('click', onClick); return b; }
 
   // ---------- title / character creation ----------
   function title() {
     clear();
+    root.appendChild(pic(META.image, META.imageAlt));
     root.appendChild(el('h1', {}, META.title));
     root.appendChild(el('p', { 'class': 'lead' }, META.tagline));
     if (State.load()) root.appendChild(btn('Continue', function () { S = State.load(); play(); }));
@@ -82,6 +90,7 @@
     if (msg) say(msg);
     clear();
     root.appendChild(hud(lvl));
+    root.appendChild(pic(lvl.image, lvl.imageAlt));
     root.appendChild(el('p', { 'class': 'scene' }, lvl.intro));
     var log = el('ul', { 'class': 'log' });
     logLines.forEach(function (l) { log.appendChild(el('li', {}, l)); });

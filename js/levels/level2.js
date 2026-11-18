@@ -14,6 +14,7 @@ window.Levels = window.Levels || [];
     end: { speaker: 'Dr. Ana and Cy', text: 'Ana: Good. Please tell us the answer when you have it.' } } };
 
   window.Levels[1] = { id: 2, title: 'The Dome',
+    image: 'assets/level2.webp', imageAlt: 'Illustration: the inside of a great glass dome with three greenhouses side by side and a notice board.',
     intro: 'A great glass dome, three greenhouses growing side by side: Dome, Vine and Moss. A notice board lists three botanists, Ana, Bo and Cy, and a rota that nobody can agree on.',
     hotspots: [
       { id: 'look2', label: 'Read the notice board', text: 'Handwritten notes: "Cy does not tend Vine." "Not my house." "Bo, where are you?" The Moss house is wilting.', xp: 5 },
